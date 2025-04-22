@@ -9,8 +9,13 @@ from nltk.corpus import stopwords, names, wordnet
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag
-
 from scipy.sparse import hstack
+
+nltk.download("punkt", quiet=True)
+nltk.download("stopwords", quiet=True)
+nltk.download("wordnet", quiet=True)
+nltk.download("averaged_perceptron_tagger", quiet=True)
+nltk.download("names", quiet=True)
 
 # Load models
 with open("models/model.pkl", "rb") as f:
