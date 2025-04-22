@@ -68,7 +68,7 @@ CORS(app)
 def analyze():
     data = request.get_json()
     text = data.get("text", "")
-    source = data.get("source", "frontend")  # optional source
+    source = None
 
     clean_text = preprocess_data(text)
     tfidf_vec = tfidf.transform([clean_text])
