@@ -128,10 +128,10 @@ def analyze():
     margin = 0.02
     top_idx = np.argmax(probs)
     top_score = probs[top_idx]
-    predicted_traits = [
+    predicted_traits = sorted([
         traits[i] for i, p in enumerate(probs)
         if p >= threshold and (top_score - p <= margin)
-    ]
+    ])
 
     # Trait-specific thresholds (optional override)
     trait_thresholds = {
