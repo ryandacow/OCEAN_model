@@ -22,11 +22,11 @@ nltk.download('averaged_perceptron_tagger_eng')
 nltk.download("names", quiet=True)
 
 # Load models
-with open("models/model.pkl", "rb") as f:
+with open("models/ocean_model.pkl", "rb") as f:
     model = pickle.load(f)
 with open("models/tfidf_vectorizer.pkl", "rb") as f:
     tfidf = pickle.load(f)
-with open("models/ohe_encoder.pkl", "rb") as f:
+with open("models/source_ohe.pkl", "rb") as f:
     ohe = pickle.load(f)
 with open("models/topic_stopwords.pkl", "rb") as f:
     topic_stopwords = pickle.load(f)
@@ -141,6 +141,7 @@ def analyze():
         'Conscientiousness': 0.4,
         'Openness': 0.5
     }
+    
     binary_vector = [
         1 if probs[i] >= trait_thresholds[traits[i]] else 0
         for i in range(len(traits))
