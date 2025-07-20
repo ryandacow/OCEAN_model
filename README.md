@@ -124,7 +124,7 @@ These are intentionally excluded from the runtime environment for the API to kee
 
 ## 📫 Contact
 
-Feel free to reach out via [my GitHub profile](https://github.com/ryanneo) with questions or feedback.
+Feel free to reach out via [my GitHub profile](https://github.com/ryandacow) with questions or feedback.
 
 ---
 
