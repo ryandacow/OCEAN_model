@@ -1,0 +1,11 @@
+# Ignore Python cache and notebook junk
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ignore temp or backup files
+*.swp
+*.bak
+*~
+
+# Allow dataset and model files to be versioned intentionally
